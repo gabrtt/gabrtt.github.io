@@ -13,6 +13,9 @@ input{width: 25%;}
     width:300px;
 
 }
+<head>
+	<title> Agenda</title>	
+</head>	
 body{
 margin-top: 25% ;
 
@@ -20,7 +23,7 @@ margin-top: 25% ;
     height:200px; }
 }
 </style>
-<body onload="checkCookie();loadEvent(); ano()">
+<body onload="checkCookie();loadEvent(); ano(); setCookie('number', 0 ,360)">
 <h1>Qual dia da semana?</h1>
 <div class="blocktext">
 <input id="dia" value='0'> 
