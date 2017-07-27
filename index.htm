@@ -17,11 +17,7 @@ input{width: 25%;}
   <title>Agenda</title>
 </head>
 body{
-margin-top: 25% ;
 
-
-    height:200px; }
-}
 </style>
 <body onload="checkCookie();loadEvent(); ano(); setCookie('number', 0 ,360)">
 <h1>Qual dia da semana?</h1>
@@ -67,9 +63,9 @@ function getCookie(cname) {
 function checkCookie() {
     var username = getCookie("username");
     if (username != "") {
-        alert("Welcome again " + username);
+        alert("EAE  " + username);
     } else {
-        username = prompt("Please enter your name:", "");
+        username = prompt("Digite seu nome:", "");
         if (username != "" && username != null) {
             setCookie("username", username, 365);
         }
