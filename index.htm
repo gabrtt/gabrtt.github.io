@@ -17,7 +17,7 @@
 function pegaDado(){
 
   var rouba = new XMLHttpRequest();
-  rouba.open('GET', 'http://catedral.prefeitura.unicamp.br/cardapio.php');
+  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-.json');
   rouba.onload = function(){
     var dado = rouba.responseText;
    document.getElementById("corpo").innerHTML = dado;
