@@ -4,12 +4,11 @@
 <head>
   <title>Agenda</title>
 </head>
-body{
 
 </style>
 <body onload="pegaDado()">
 
-<p id="corpo"></p>
+<p id="corpo">.</p>
 
 </body>
 
@@ -22,6 +21,7 @@ function pegaDado(){
   rouba.onload = function(){
     var dado = roupa.responseText;
     document.getElementById("corpo").innerHTML = dado[0];
+    alert("dse");
   }
   rouba.send();
 }
