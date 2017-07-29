@@ -17,7 +17,7 @@
 function pegaDado(){
 
   var rouba = new XMLHttpRequest();
-  rouba.open('GET', 'http://www.prefeitura.unicamp.br/servicos/divisao-de-alimentacao/cardapio-dos-restaurantes');
+  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-');
   rouba.onload = function(){
     var dado = roupa.responseText;
     document.getElementById("corpo").innerHTML = dado[0];
