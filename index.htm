@@ -24,7 +24,9 @@ body{
 <div class="blocktext">
 <input id="dia" value='0'> 
 <input id="mes" value='0'> 
-<input id="ano" value='0'> 
+<input id="ano" value='0'> var ourRequest = new XMLHttpRequest();
+  ourRequest.open('GET', 'https://learnwebcode.github.io/jvar ourRequest = new XMLHttpRequest();
+  ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animason-example/anima
 <button type="button"
 onclick="search()">
 ok</button>
@@ -46,7 +48,7 @@ function pegaDado(){
   rouba.open('GET', 'http://www.prefeitura.unicamp.br/servicos/divisao-de-alimentacao/cardapio-dos-restaurantes');
   rouba.onload = function(){
     var dado = roupa.responseText;
-    alert(dado).;
+    alert(dado);
   }
   rouba.send();
 }
