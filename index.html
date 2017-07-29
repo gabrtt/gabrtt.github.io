@@ -11,7 +11,7 @@
 function pegaDado(){
 
   var rouba = new XMLHttpRequest();
-  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+  rouba.open('GET', 'http://query.yahooapis.com/v1/public/yql?q=select%20content%20from%20data.headers%20where%20url%3D"http://catedral.prefeitura.unicamp.br/cardapio.php?"&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys);
   rouba.onload = function(){
     var dado = rouba.responseText;
     document.getElementById("corpo").innerHTML = dado;
