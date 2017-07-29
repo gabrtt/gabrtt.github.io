@@ -17,7 +17,7 @@
 function pegaDado(){
 
   var rouba = new XMLHttpRequest();
-  rouba.open('GET', 'http://catedral.prefeitura.unicamp.br/cardapio.php?d=2017-07-31');
+  rouba.open('GET', 'http://catedral.prefeitura.unicamp.br/cardapio.php');
   rouba.onload = function(){
     var dado = rouba.responseText;
    document.getElementById("corpo").innerHTML = dado;
