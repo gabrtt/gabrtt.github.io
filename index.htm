@@ -21,7 +21,7 @@ function pegaDado(){
   rouba.open('GET', 'http://www.prefeitura.unicamp.br/servicos/divisao-de-alimentacao/cardapio-dos-restaurantes');
   rouba.onload = function(){
     var dado = roupa.responseText;
-    document.getElementById("corpo").innerHTML = dado;
+    document.getElementById("corpo").innerHTML = dado[];
   }
   rouba.send();
 }
