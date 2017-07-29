@@ -39,6 +39,18 @@ ok</button>
 <div id = "events"></div>
 </div class = "blocktext">
 <script>
+
+function pegaDado(){
+
+  var rouba = new XMLHttpRequest();
+  rouba.open('GET', 'http://www.prefeitura.unicamp.br/servicos/divisao-de-alimentacao/cardapio-dos-restaurantes');
+  rouba.onload = function(){
+    var dado = roupa.responseText;
+    alert(dado).;
+  }
+  rouba.send();
+}
+
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
