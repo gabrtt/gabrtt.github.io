@@ -6,13 +6,6 @@
 </head>
 
 
-</style>
-<body onload="pegaDado()">
-
-<p id="corpo"></p>
-
-</body>
-
 <script> 
 
 function pegaDado(){
@@ -21,7 +14,44 @@ function pegaDado(){
   rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
   rouba.onload = function(){
     var dado = rouba.responseText;
-    document.getElementById("corpo").innerHTML = dado[];
+    document.getElementById("corpo").innerHTML = dado;
+  }body{
+8
+
+  rouba.send();
+}
+
+</script>
+<body onload="pegaDado()">
+
+<p id="corpo"></p>
+
+</body>
+
+<script> <script> 
+
+function pegaDado(){
+
+  var rouba = new XMLHttpRequest();
+  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+  rouba.onload = function(){
+    var dado = rouba.responseText;
+    document.getElementById("corpo").innerHTML = dado;
+  }body{
+8
+
+  rouba.send();
+}
+
+</script>
+
+function pegaDado(){
+
+  var rouba = new XMLHttpRequest();
+  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+  rouba.onload = function(){
+    var dado = rouba.responseText;
+    document.getElementById("corpo").innerHTML = dado;
   }body{
 8
 
