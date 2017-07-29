@@ -17,7 +17,7 @@
 function pegaDado(){
 
   var rouba = new XMLHttpRequest();
-  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-.json');
+  rouba.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
   rouba.onload = function(){
     var dado = rouba.responseText;
    document.getElementById("corpo").innerHTML = dado;
