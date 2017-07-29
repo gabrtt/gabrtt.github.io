@@ -1,46 +1,19 @@
 <!DOCTYPE html>
 <html>
-<style>
 
-h1, input,p, h3, h4, h2 { text-align: center;}
-input{width: 25%;}
-.blocktext {
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-    width:300px;
-
-}
 <head>
   <title>Agenda</title>
 </head>
 body{
 
 </style>
-<body onload="pegaDado();checkCookie();loadEvent(); ano(); setCookie('number', 0 ,360)">
-<h1>Qual dia da semana?</h1>
-<div class="blocktext">
-<input id="dia" value='0'> 
-<input id="mes" value='0'> 
-<input id="ano" value='0'> var ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://learnwebcode.github.io/jvar ourRequest = new XMLHttpRequest();
-  ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animason-example/anima
-<button type="button"
-onclick="search()">
-ok</button>
-<p id="demo"></p>
-<h2 id= "titulo"><h2>
+<body onload="pegaDado()">
 
+<p id="corpo"></p>
 
-<button id = "buttonAdd" onclick="addEvent()">Add Evento</button>
-<button id = "buttonClear" onclick="clearEvent()">Clear </button>
-<input type= "number" id= "nEvent" min=0 >
-<button id = "buttonDel" onclick="delEvent()">del </button>
-<div id = "events"></div>
-</div class = "blocktext">
-<script>
+</body>
+
+<script> 
 
 function pegaDado(){
 
@@ -48,131 +21,10 @@ function pegaDado(){
   rouba.open('GET', 'http://www.prefeitura.unicamp.br/servicos/divisao-de-alimentacao/cardapio-dos-restaurantes');
   rouba.onload = function(){
     var dado = roupa.responseText;
-    alert(dado);
+    document.getElementById("corpo").innerHTML = dado;
   }
   rouba.send();
 }
 
-function setCookie(cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-function checkCookie() {
-    var username = getCookie("username");
-    if (username != "") {
-        alert("EAE  " + username);
-    } else {
-        username = prompt("Digite seu nome:", "");
-        if (username != "" && username != null) {
-            setCookie("username", username, 365);
-        }
-    }
-	document.getElementById("titulo").innerHTML = "Eventos do " + username; 
-}
-function search(){
-  var data ="August 16," + document.getElementById("ano").value +" 11:13:00";	
-  var h = new Date(document.getElementById("ano").value,document.getElementById("mes").value -1,document.getElementById("dia").value,0,0,0,1);
-  var weekday = new Array(7);
-    weekday[0] = "Domingo";
-    weekday[1] = "Segunda";
-    weekday[2] = "Terça";
-    weekday[3] = "Quarta";
-    weekday[4] = "Quinta";
-    weekday[5] = "Sexta";
-    weekday[6] = "Sábado";
-  document.getElementById('demo').innerHTML = weekday[h.getDay()];
-}
-
-function ano(){
-	var d = new Date();
-	document.getElementById("ano").value = d.getFullYear();
-    	document.getElementById("dia").value = d.getDate();
-        	document.getElementById("mes").value = d.getMonth()+1;
-}
-function addEvent(){
-
-
-var nameEvent =  prompt("Titulo do evento");
-var dateEvent = prompt("Data");
-var descrEvent = prompt("Descricao");
-var number = parseInt(getCookie("number"));
-var newEvent = '<!--beginsevent'+number+'--><h3>' + (number+1)+ ". " + nameEvent+"</h3>" +"<h4> Data:" + dateEvent+"</h4>" +"<p>" + descrEvent + "</p>"+ '<!--endsevent'+number+'-->';
-
-var oldEvents = getCookie("events");
-
-var event = oldEvents + newEvent;
-setCookie("number", number + 1, 365);
- setCookie("events", event, 365);
- 
- loadEvent();
-
-}
-
-function loadEvent(){
-
-document.getElementById("events").innerHTML = getCookie("events");
-
-}
-
-function clearEvent(){
-setCookie("events", " ", 365);
-setCookie("number", 0, 365);
-loadEvent();
-}
-
-function delEvent(){
-
-var index = document.getElementById('nEvent').value - 1;
-
-var event = getCookie("events");
-alert(event);
-var initIndex = event.search( "<!--beginsevent"+index);
-if(initIndex === -1){
-  alert("Evento Não encontrado");
-
-}else{
-var endIndex = event.search( "<!--endsevent"+index);
-var end = "<!--endsevent"+index;
-
-endIndex += end.length;
-endIndex+=3;
-
-event = event.slice(0, initIndex)+event.slice(endIndex,event.length);
-
-
-
-var aux;
-for(var i = parseInt(index); i< parseInt(getCookie("number")); i++){
-	aux = parseInt(index) +1;
-    alert(aux);
-	event = event.replace( "<!--beginsevent"+aux, "<!--beginsevent"+index);
-	event = event.replace( "<!--endsevent"+aux, "<!--endsevent"+index);
-    event = event.replace("<h3>" + aux,"<h3>" + index);
-
-}
-
-setCookie("events", event, 365);
-loadEvent();
-}
-}
 </script>
-
-</body>
 </html>
