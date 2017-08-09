@@ -7,7 +7,56 @@
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
-<body><div class="container"><script async="" style="widht:100px;height:50px" src="//www.schematics.io/draw/ovBRq8m0/1/embed"></script>
+<body><div class="container"><script async="" style="widht:100px;height:50px" "="">
+(function () {
+    var urlKey = 'ovBRq8m0',
+        urlEmbedded = 'https://www.schematics.io/draw/ovBRq8m0/1/embedded',
+        urlScript = 'https://www.schematics.io/draw/ovBRq8m0/1/embed';
+
+    function createEmbed() {
+        var iframe = document.createElement('iframe'),
+            target = document.querySelector('script[src*="' + urlScript.split('//')[1] + '"]');
+
+        iframe.src = urlEmbedded;
+        iframe.id = 'SIO_' + ~~(new Date().getTime() / 86400000);
+        iframe.width = '100%';
+        iframe.height = 0;
+        iframe.frameBorder = 0;
+        iframe.allowtransparency = true;
+        iframe.sandbox = 'allow-modals allow-forms allow-scripts allow-same-origin allow-popups';
+
+        target.parentNode.insertBefore(iframe, target.nextSibling);
+
+        function setHeight(data) {
+            if (data.urlKey === urlKey) {
+                return iframe.height = data.height <= 0 ? 400 : data.height;
+            }
+        }
+        function edit(data) {
+            if (data.urlKey === urlKey) {
+                window.location = data.url;
+            }
+        }
+
+        function handleMessage(evt) {
+            var data = evt.data[1];
+            switch (evt.data[0]) {
+                case 'embed':
+                    return setHeight(data);
+                case 'resize':
+                    return setHeight(data);
+                case 'edit':
+                    return edit(data);
+            }
+        }
+
+        window.addEventListener('message', handleMessage, false);
+    };
+
+    setTimeout(createEmbed, 1);
+})
+
+</script>
 
 <p>novo</p></div></body>
 </html>
