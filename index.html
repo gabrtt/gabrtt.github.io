@@ -16,35 +16,46 @@ body {
 
 <p><div class="toc">
 <ul>
-<li><a href="#14-amplificadores">1.4   Amplificadores</a></li>
+<li><a href="#14-amplificadores">1.4   Amplificadores</a><ul>
+<li><a href="#amplificador-linear">Amplificador Linear</a><ul>
+<li><ul>
+<li><a href="#ganho-expresso-em-decibéis">Ganho expresso em decibéis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </p>
+
+
+
+<h2 id="amplificador-linear">Amplificador Linear</h2>
 
 <p>Transdutores, no geral, emitem sinais de baixa tensão (μV ou mV) e baixa energia, tornando seu processamento uma tarefa difícil. Para que o nível de tensão seja elevado, a fim de facilitar o processamento do sinal, utiliza-se <strong>amplificadores</strong>.</p>
 
 <p>Amplificadores ideais ditos lineares,  têm como sinal de saída uma cópia do sinal de entrada, porém com sua <strong>magnitude alterada</strong>. Esse comportamento não permite <strong>nenhuma distorção</strong> na forma de onda encontrada na saída. Esse amplificador pode ser descrito pela seguinte expressão:</p>
 
-<div align="center"><script type="math/tex; mode=display" id="MathJax-Element-1">v_0(t) = A v_i(t)</script></div>
+<div align="center"><script type="math/tex; mode=display" id="MathJax-Element-19">v_0(t) = A v_i(t)</script></div>
 
 <p>A constante <em>A</em> é denominada <strong>ganho</strong> do amplificador e apresenta uma relação de linearidade. Caso essa relação não seja respeitada, o amplificador apresenta <strong>distorções não lineares</strong>. Os amplificadores necessitam de alimentação, pois não há criação de energia. A energia acrescida ao sinal de saída é <strong>proveniente da fonte</strong> de alimentação do amplificador. Os amplificadores são representados pelo seguinte símbolo:</p>
 
-<div align="center">!![Simbologia do amplificador](amp1.svg)
-<div align="left">
+<p></p><div align="center">! <br>
+<img src="amp1.svg" alt="Simbologia do amplificador" title=""> <br>
+<div align="left"><p></p>
 
-Ganho de tensão A<sub>v</sub>:
+<p>Ganho de tensão A<sub>v</sub>:</p></div></div>
 
+<h4 id="ganho-expresso-em-decibéis-1">Ganho expresso em decibéis</h4>
 
+<p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
 
+<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica.  <br>
+<script type="math/tex; mode=display" id="MathJax-Element-18">G_{Bell} = log_{10} \frac{P_o}{P_i} = log_{10}  A_p</script></p>
 
-<div class="se-preview-section-delimiter"></div>
+<p>Para </p>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-2">A_v = \frac{v_o}{v_i} </script> <br>
-fd</p></div></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-296">A_v = \frac{v_o}{v_i} </script></p>
-
-<blockquote>
-  <p>A saída de um amplificador linear alimentado por um sinal senoidal é senoidal com amplitude multiplicada pelo ganho, <strong>não apresentando distorções</strong>.</p>
-</blockquote></div></body>
+<p>Também utiliza-se uma escala logarítmica denominada <strong>decibel</strong>. o Bel é uma unidade extremamente grande, portanto pouco descritiva em  fenômenos físicos, sendo necessária a utilização de seu submúltiplo, um décimo de Bel.</p></div></body>
 </html>
