@@ -62,10 +62,11 @@ Ganho de tensão A<sub>v</sub>:
 
 <p><script type="math/tex; mode=display" id="MathJax-Element-3">A_i = \frac{i_o}{i_i} \quad \quad\quad\quad\quad A_p = \frac{v_o i_o}{v_i i_i} </script> <br>
 <br>
-Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma: <br>
-<br>
-<script type="math/tex; mode=display" id="MathJax-Element-4">A_p = A_i \cdot A_v</script> <br>
-<br></p>
+Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-4">A_p = A_i \cdot A_v</script></p>
 
 <div class="se-preview-section-delimiter"></div>
 
@@ -74,74 +75,36 @@ Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma: <br>
 <p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
 
 <p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
-<script type="math/tex; mode=display" id="MathJax-Element-5">G_{p} = log_{10} |\frac{P_o}{P_i}| B = log_{10}  |A_p| B</script></p>
+<script type="math/tex; mode=display" id="MathJax-Element-5">G = log_{10} |\frac{P_o}{P_i}| B = log_{10}  |A_p| B</script></p>
 
 <p>O ganho para dispositivos eletrônicos representados em Bel, geralmente apresenta casas decimais, e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>.</p>
 
 <div class="se-preview-section-delimiter"></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-6">G_{p} = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB= 10 \cdot log_{10}  |A_p| dB</script></p>
-
-<p>O ganho de tensão por ser obtido por meio da seguinte manipulação.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-7">G_{v} = 10 \cdot log_{10} | \frac{v_o²/R}{v_i²/R}| dB= 20 \cdot log_{10}   | \frac{v_o}{v_i}| = 20 \cdot log_{10}   |A_v| dB</script></p>
-
-<p>Da mesma forma, o ganho de corrente pode ser obtido por meio da seguinte manipulação.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-8">G_{i} = 10 \cdot log_{10} | \frac{i_o² R}{i_i² R}| dB= 20 \cdot log_{10}   | \frac{i_o}{i_i}| = 20 \cdot log_{10}   |A_i| dB</script></p>
-
-<p>Há ainda uma relação entre os ganhos de potência, corrente e tensão.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-9">G_{p} = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB=10 \cdot log_{10} | \frac{v_o i_o}{v_i i_i}| dB =10 \cdot log_{10} | A_vA_i| dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-10">G_p = 10 \cdot log_{10} | A_vA_i| dB =10  \cdot log_{10}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-11">G_p = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-12">G_p = \frac{1}{2}  (G_v+G_i) dB</script></p>
-
-<blockquote>
-  <p>O ganho de tensão é definido a partir do ganho de potência por questões históricas e técnicas. A medição logarítmica definida pela potência foi introduzida pela <em>Bell Telephone Company</em>, que especificava seus dispositivos através dessa unidade. Para fins de comparação, </p>
-</blockquote></div></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-670">A_i = \frac{i_o}{i_i} \quad \quad\quad\quad\quad A_p = \frac{v_o i_o}{v_i i_i} </script> <br>
-<br>
-Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
-
-
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-673">A_p = A_i \cdot A_v</script></p>
-
-<h2 id="ganho-expresso-em-decibéis-1">Ganho expresso em decibéis</h2>
-
-<p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
-
-<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
-<script type="math/tex; mode=display" id="MathJax-Element-21">G = log_{10} |\frac{P_o}{P_i}| B = log_{10}  |A_p| B</script></p>
-
-<p>O ganho para dispositivos eletrônicos representados em Bel, geralmente apresenta casas decimais, e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>.</p>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-97">G = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB= 10 \cdot log_{10}  |A_p| dB</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-6">G = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB= 10 \cdot log_{10}  |A_p| dB</script></p>
 
 <p>O ganho pode ser obtido pela tensão por meio da seguinte manipulação, caso as resistências de entrada e saída sejam iguais.</p>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-137">G = 10 \cdot log_{10} | \frac{v_o²/R_o}{v_i²/R_i}| dB= 20 \cdot log_{10}   | \frac{v_o}{v_i}| = 20 \cdot log_{10}   |A_v| dB</script></p>
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-7">G = 10 \cdot log_{10} | \frac{v_o²/R_o}{v_i²/R_i}| dB= 20 \cdot log_{10}   | \frac{v_o}{v_i}| = 20 \cdot log_{10}   |A_v| dB</script></p>
 
 <p>Da mesma forma, o ganho pode ser obtido pela corrente por meio da seguinte manipulação.</p>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-334">G = 10 \cdot log_{10} | \frac{i_o² R_o}{i_i² R_i}| dB= 20 \cdot log_{10}   | \frac{i_o}{i_i}| = 20 \cdot log_{10}   |A_i| dB</script> <br>
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-8">G = 10 \cdot log_{10} | \frac{i_o² R_o}{i_i² R_i}| dB= 20 \cdot log_{10}   | \frac{i_o}{i_i}| = 20 \cdot log_{10}   |A_i| dB</script> <br>
 Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mesmo se as resistências não forem iguais, <strong>desde que seja especificado como ganho de tensao G<sub>v</sub></strong>.</p>
 
+<div class="se-preview-section-delimiter"></div>
 
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-410">G_v = 20 \cdot log_{10}   |A_v| dB</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-9">G_v = 20 \cdot log_{10}   |A_v| dB</script></p>
 
 <p>Bem como o ganho de corrente G<sub>i</sub>.</p>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-638">G_i = 20 \cdot log_{10}   |A_i| dB</script></p>
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-10">G_i = 20 \cdot log_{10}   |A_i| dB</script></p>
 
 <p>Há ainda uma relação entre o ganho e os ganhos de  corrente e tensão.</p>
 
@@ -149,8 +112,10 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
   <p>Pode-se representar o ganho G como G<sub>p</sub>, para fins didáticos. Afinal, o ganho é definido como ganho de potência. O ganho de tensão é definido a partir do ganho de potência por questões históricas. A medição logarítmica definida pela potência foi introduzida pela <em>Bell Telephone Company</em>, que especificava seus dispositivos através dessa unidade. </p>
 </blockquote>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-664">G = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB=10 \cdot log_{10} | \frac{v_o i_o}{v_i i_i}| dB =10 \cdot log_{10} | A_vA_i| dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-665">G= 10 \cdot log_{10} | A_vA_i| dB =10  \cdot log_{104}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-666">G = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-667">G = \frac{1}{2}  (G_v+G_i) dB</script></p></div></body>
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-11">G = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB=10 \cdot log_{10} | \frac{v_o i_o}{v_i i_i}| dB =10 \cdot log_{10} | A_vA_i| dB </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-12">G= 10 \cdot log_{10} | A_vA_i| dB =10  \cdot log_{104}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-13">G = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-14">G = \frac{1}{2}  (G_v+G_i) dB</script></p></div></div></div></body>
 </html>
