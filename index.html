@@ -38,24 +38,83 @@ body {
 
 <p>Amplificadores ideais ditos lineares,  têm como sinal de saída uma cópia do sinal de entrada, porém com sua <strong>magnitude alterada</strong>. Esse comportamento não permite <strong>nenhuma distorção</strong> na forma de onda encontrada na saída. Esse amplificador pode ser descrito pela seguinte expressão:</p>
 
-<div align="center"><script type="math/tex; mode=display" id="MathJax-Element-19">v_0(t) = A v_i(t)</script></div>
+<div align="center"><script type="math/tex; mode=display" id="MathJax-Element-1">v_0(t) = A v_i(t)</script></div>
 
 <p>A constante <em>A</em> é denominada <strong>ganho</strong> do amplificador e apresenta uma relação de linearidade. Caso essa relação não seja respeitada, o amplificador apresenta <strong>distorções não lineares</strong>. Os amplificadores necessitam de alimentação, pois não há criação de energia. A energia acrescida ao sinal de saída é <strong>proveniente da fonte</strong> de alimentação do amplificador. Os amplificadores são representados pelo seguinte símbolo:</p>
 
-<p></p><div align="center">! <br>
-<img src="amp1.svg" alt="Simbologia do amplificador" title=""> <br>
-<div align="left"><p></p>
+<div align="center">
+![Simbologia do amplificador](amp1.svg)
+<div align="left">
 
-<p>Ganho de tensão A<sub>v</sub>:</p></div></div>
+Ganho de tensão A<sub>v</sub>:
+
+
+
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-2">A_v = \frac{v_o}{v_i} </script></p>
+
+<blockquote>
+  <p>A saída de um amplificador linear alimentado por um sinal senoidal é senoidal com amplitude multiplicada pelo ganho, <strong>não apresentando distorções</strong>.</p>
+</blockquote>
+
+<p>Além do ganho de tensão A<sub>v</sub>, há o ganho de corrente  A<sub>i</sub> e o ganho de potência A<sub>p</sub>, definidos pelas equações a seguir. <br>
+<br>
+<br></p>
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-3">A_i = \frac{i_o}{i_i} \quad \quad\quad\quad\quad A_p = \frac{v_o i_o}{v_i i_i} </script> <br>
+<br>
+Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma: <br>
+<br>
+<script type="math/tex; mode=display" id="MathJax-Element-4">A_p = A_i \cdot A_v</script> <br>
+<br></p>
+
+<div class="se-preview-section-delimiter"></div>
+
+<h4 id="ganho-expresso-em-decibéis">Ganho expresso em decibéis</h4>
+
+<p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
+
+<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
+<script type="math/tex; mode=display" id="MathJax-Element-5">G_{p} = log_{10} \frac{P_o}{P_i} B = log_{10}  A_p B</script></p>
+
+<p>O ganho para dispositivos eletrônicos representados em Bel, geralmente apresenta casas decimais, e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>.</p>
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-6">G_{dB} = 10 \cdot log_{10} \frac{P_o}{P_i} = 10 \cdot log_{10}  A_p</script> <br>
+Também utiliza-se uma escala logarítmica denominada <strong>decibel</strong>. o Bel é uma unidade extremamente grande, portanto pouco descritiva em  fenômenos físicos, sendo necessária a utilização de seu submúltiplo, um décimo de Bel.</p></div></div>
 
 <h4 id="ganho-expresso-em-decibéis-1">Ganho expresso em decibéis</h4>
 
 <p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
 
-<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica.  <br>
-<script type="math/tex; mode=display" id="MathJax-Element-18">G_{Bell} = log_{10} \frac{P_o}{P_i} = log_{10}  A_p</script></p>
+<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
+<script type="math/tex; mode=display" id="MathJax-Element-64">G_{p} = log_{10} |\frac{P_o}{P_i}| B = log_{10}  |A_p| B</script></p>
 
-<p>Para </p>
+<p>O ganho para dispositivos eletrônicos representados em Bel, geralmente apresenta casas decimais, e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>.</p>
 
-<p>Também utiliza-se uma escala logarítmica denominada <strong>decibel</strong>. o Bel é uma unidade extremamente grande, portanto pouco descritiva em  fenômenos físicos, sendo necessária a utilização de seu submúltiplo, um décimo de Bel.</p></div></body>
+<p><script type="math/tex; mode=display" id="MathJax-Element-250">G_{p} = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB= 10 \cdot log_{10}  |A_p| dB</script></p>
+
+<p>O ganho de tensão por ser obtido por meio da seguinte manipulação.</p>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-252">G_{v} = 10 \cdot log_{10} | \frac{v_o²/R}{v_i²/R}| dB= 20 \cdot log_{10}   | \frac{v_o}{v_i}| = 20 \cdot log_{10}   |A_v| dB</script></p>
+
+<p>Da mesma forma, o ganho de corrente pode ser obtido por meio da seguinte manipulação.</p>
+
+
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-327">G_{i} = 10 \cdot log_{10} | \frac{i_o² R}{i_i² R}| dB= 20 \cdot log_{10}   | \frac{i_o}{i_i}| = 20 \cdot log_{10}   |A_i| dB</script></p>
+
+<p>Há ainda uma relação entre os ganhos de potência, corrente e tensão.</p>
+
+
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-712">G_{p} = 10 \cdot log_{10} | \frac{P_o}{P_i}| dB=10 \cdot log_{10} | \frac{v_o i_o}{v_i i_i}| dB =10 \cdot log_{10} | A_vA_i| dB </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-713">G_p = 10 \cdot log_{10} | A_vA_i| dB =10  \cdot log_{10}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-714">G_p = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
+<script type="math/tex; mode=display" id="MathJax-Element-715">G_p = \frac{1}{2}  (G_v+G_i) dB</script></p></div></body>
 </html>
