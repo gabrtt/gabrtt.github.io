@@ -90,14 +90,15 @@ Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
 </blockquote>
 
 <div align="center">
-
+&gt;S
 &gt;|   A      | G<sub>B</sub>     | G<sub>dB</sub> |
 |:—-: |:————-:    |:————–:   |
 | 1000  |      3 B          |      30dB         |
 |  100  |      2 B          |      20 dB        |
-|  10   |      1 B          |      10 dB        |
+|  10   |      1 B          |      10 dB        |S
+&gt; 
+<div align="left">
 
- <div>
  &gt;Para um valor de ganho (A) de 500, o ganho em bel é aproximadamente de 2,7 B e o decibel de 27 dB, evitando o uso de vírgulas.
 
 <br>
@@ -132,15 +133,13 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 <p>Há ainda uma relação entre o ganho e os ganhos de  corrente e tensão.</p>
 
 <blockquote>
-  <p>Pode-se representar o ganho G como G<sub>p</sub>, para fins didáticos. Afinal, o ganho é definido como ganho de potência. O ganho de tensão é definido a partir do ganho de potência por questões históricas. A medição logarítmica definida pela potência foi introduzida pela <em>Bell Telephone Company</em>, que especificava seus dispositivos através dessa unidade. </p>
+  <p>Pode-se representar o ganho G como G<sub>p</sub>, para fins didáticos. Afinal, o ganho é definido como ganho de potência. O ganho de tensão é definido a partir do ganho de potência por questões históricas. A medição logarítmica definida pela potência foi introduzida pela <em>Bell Telephone Company</em>, que especificava seus dispositivos através dessa unidade. Uma vez que a percepção sonora humana não é linear e sim logarítmica, o uso do ganho em decibel para especificação de atenuação em dispositivos de telefonia faz todo sentido.</p>
+  
+  <p><script type="math/tex; mode=display" id="MathJax-Element-11">G = 10 \cdot log_{10}  \frac{P_o}{P_i}dB=10 \cdot log_{10}  \frac{v_o i_o}{v_i i_i} dB =10 \cdot log_{10} (A_v A_i) dB </script> <br>
+  <script type="math/tex; mode=display" id="MathJax-Element-12">G= 10 \cdot log_{10} (A_vA_i) dB =10  \cdot log_{10}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
+  <script type="math/tex; mode=display" id="MathJax-Element-13">G = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
+  <script type="math/tex; mode=display" id="MathJax-Element-14">G = \frac{1}{2}  (G_v+G_i) dB</script></p>
 </blockquote>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-11">G = 10 \cdot log_{10}  \frac{P_o}{P_i}dB=10 \cdot log_{10}  \frac{v_o i_o}{v_i i_i} dB =10 \cdot log_{10} (A_v A_i) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-12">G= 10 \cdot log_{10} (A_vA_i) dB =10  \cdot log_{10}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-13">G = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-14">G = \frac{1}{2}  (G_v+G_i) dB</script></p>
 
 <div class="se-preview-section-delimiter"></div>
 
@@ -155,5 +154,16 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
   <p>O aumento de potência é suprido pela alimentação externa do amplificador.</p>
 </div></blockquote>
 
-<p>a</p></div></div></div></div></div></body>
+<p>a</p></div></div></div></div>
+
+<h3 id="potência-do-amplificador-1">Potência do amplificador</h3>
+
+<blockquote>
+  <p>Se a potência de saída é maior do que a potência de saída, o amplificador fere algum princípio de conservação de energia? </p>
+  
+  <p></p><div align="center"> <strong>NÃO</strong> </div>
+  <div align="left"><p></p>
+  
+  <p>O aumento de potência é suprido pela alimentação externa do amplificador. Dessa forma, o amplificador não fere nenhuma lei de conservação de energia.</p>
+</div></blockquote></div></body>
 </html>
