@@ -214,6 +214,55 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 <br>
 Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
 
+<h3 id="ganho-expresso-em-decibéis-1">Ganho expresso em decibéis</h3>
+
+<p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
+
+<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
+<script type="math/tex; mode=display" id="MathJax-Element-88">G = log_{10} \frac{P_o}{P_i} B = log_{10}  A_p B</script></p>
+
+<p>A unidade Bel é muito grande, pouquíssima variação para grandes variações de ganho (A) e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>, o que evita o usso exagerado de casas decimais.</p>
+
+<blockquote>
+  <p><em>Exemplo</em>: Tabela comparativa entre valores de Bel e decibel.</p>
+  
+  <p></p><div align="center"> <p></p>
+  
+  <table>
+<thead>
+<tr>
+  <th align="center">A</th>
+  <th align="center">G<sub>B</sub></th>
+  <th align="center">G<sub>dB</sub></th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">1000</td>
+  <td align="center">3 B</td>
+  <td align="center">30dB</td>
+</tr>
+<tr>
+  <td align="center">100</td>
+  <td align="center">2 B</td>
+  <td align="center">20 dB</td>
+</tr>
+<tr>
+  <td align="center">10</td>
+  <td align="center">1 B</td>
+  <td align="center">10 dB</td>
+</tr>
+</tbody></table>
+
+  
+  <p></p><div align="left"> <br>
+  Para um valor de ganho (A) de 500, o ganho em bel é aproximadamente de 2,7 B e o decibel de 27 dB, evitando o uso de vírgulas.<p></p>
+</div></div></blockquote>
+
+<p><br>
+<script type="math/tex; mode=display" id="MathJax-Element-89">G = 10 \cdot log_{10}  \frac{P_o}{P_i} dB= 10 \cdot log_{10}  |A_p| dB</script></p>
+
+<p>O ganho pode ser obtido pela tensão por meio da seguinte manipulação, caso as resistências de entrada e saída sejam iguais.</p>
+
 <h3 id="alimentação-do-amplificador-1">Alimentação do amplificador</h3>
 
 <p>Além de suprir a potência para amplificação, a alimentação é responsável por definir os limites de tensão do sinal amplificado. De modo que a tensão de saída não pode ser maior do que a tensão da alimentação do amplificador.</p>
@@ -233,7 +282,7 @@ Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
 
 <blockquote>
   <p>Com um sinal de entrada dentro dos limites da amplificação, o amplificador é tido como linear, não apresentando distorções de forma. <br>
-  </p><div align="center" style="zoom:0.5"><img src="curvasatur.png" alt="Curva ampop" title=""><p></p>
+  </p><div align="center" style="zoom:0.5"><img src="curvasatur.png" alt="Curva ampop" title="">ampopcurva<p></p>
   
   <p></p><div align="left" <br="">
   ffdf<p></p>
