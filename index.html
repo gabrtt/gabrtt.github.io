@@ -224,8 +224,7 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 <div align="center">
 
 **O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA**
-
-
+<br>
 <div align="left">    
 
 &gt; CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.
@@ -240,21 +239,18 @@ Portanto, para garantir a linearidade do amplificador, é necessário que o dom�
 <p><script type="math/tex; mode=display" id="MathJax-Element-18"> \frac{V_-}{A_v}<v(t)<\frac{V_{+}}{A_v}</script> <br>
 Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
 
-<p></p><div align="center">  <br>
-<img src="img/ampopcurva.svg" alt="Curva ampop" title=""><p></p>
+<p></p><div align="center"> <p></p>
+
+<p><img src="img/ampopcurva.svg" alt="Curva ampop" title=""></p>
 
 <div align="left">
 Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.
 A potência fornecida ao amplificador é cedida pela soma das potências fornecidadas pelas duas fontes.
 
 
+  <div align="center"> 
 
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-19">P_{fonte} = V_+ I_+ + V_- I_-</script> <br>
-  </p><div align="center">  <br>
-  <img src="img/supplyopampdual.svg" alt="dual ampop" title=""><p></p>
+  ![dual ampop](img/supplyopampdual.svg)
 
 <div align="left">
 Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).
@@ -265,13 +261,14 @@ A potência fornecida pela fonte no caso de alimentação com apenas uma fonte �
 
 <div class="se-preview-section-delimiter"></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-20">P_{fonte} = V I</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-19">P_{fonte} = V I</script></p>
 
 <p></p><div align="center"><p></p>
 
 <p><img src="img/supplyopampsingle.svg" alt="single ampop" title=""></p>
 
 <div align="left">
+
 Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. 
 
   <div align="center">
@@ -285,7 +282,7 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 &gt;Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador
 &gt; <div align="center">
 
-&gt;  ![r](img/supplyopampdiv.svg)
+&gt;  ![rdiv](img/supplyopampdiv.svg)
 
  <div align="left">
 
@@ -304,19 +301,19 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <div class="se-preview-section-delimiter"></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-21"> A_v = \left.\frac{dv_{out}}{dv_{in}}\right|_Q</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-20"> A_v = \left.\frac{dv_{out}}{dv_{in}}\right|_Q</script></p>
 
 <p>E o sinal de entrada polarizado é:</p>
 
 <div class="se-preview-section-delimiter"></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-22">v_{IN} = V_{in} + v_{in}</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-21">v_{IN} = V_{in} + v_{in}</script></p>
 
 <p>E o sinal de saída polarizado é:</p>
 
 <div class="se-preview-section-delimiter"></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-23">v_{OUT} = V_{OUT} + v_{out}</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-22">v_{OUT} = V_{OUT} + v_{out}</script></p>
 
 <p>Essa situação é melhor observada com as imagens abaixo.</p>
 
@@ -340,44 +337,7 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <p><img src="img/modeloopamptranscondutancia.svg" alt="transconduamp" title=""></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
-<h3 id="alimentação-do-amplificador-1">Alimentação do amplificador</h3>
-
-<p>Além de suprir a potência para amplificação, a alimentação é responsável por definir os limites de tensão do sinal amplificado. De modo que a tensão de saída não pode ser maior do que a tensão da alimentação do amplificador.</p>
-
-<p>Isso traz uma importante consequência:</p>
-
-<p></p><div align="center"><p></p>
-
-<p><strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong> <br>
-<br>
-</p><div align="left">    <p></p>
-
-<blockquote>
-  <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
-</blockquote>
-
-<p>Portanto, para garantir a linearidade do amplificador, é necessário que o domínio do sinal esteja dentro dos limites de tensão da fonte.</p></div></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-28"> \frac{V_-}{A_v}<v(t)<\frac{V_{+}}{A_v}</script> <br>
-Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
-
-<p></p><div align="center"> <p></p>
-
-<p><img src="img/ampopcurva.svg" alt="Curva ampop" title=""></p>
-
-<p></p><div align="left"> <br>
-Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação. <br>
-A potência fornecida ao amplificador é cedida pela soma das potências fornecidadas pelas duas fontes.<p></p>
-
-<p></p><div align="center"> <p></p>
-
-<p><img src="img/supplyopampdual.svg" alt="dual ampop" title=""></p>
-
-<p></p><div align="left"> <br>
-Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V). <br>
-A potência fornecida pela fonte no caso de alimentação com apenas uma fonte é asimplesmente a potência fornecida pela fonte.<p></p></div></div></div></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-25">P_{fonte} = V I</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-23">P_{fonte} = V I</script></p>
 
 <p></p><div align="center"><p></p>
 
@@ -396,8 +356,9 @@ A potência fornecida pela fonte no caso de alimentação com apenas uma fonte �
 <blockquote>
   <p>Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. </p>
   
-  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador <br>
-  </p><div align="center"><p></p>
+  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador</p>
+  
+  <p></p><div align="center"><p></p>
   
   <p><img src="img/supplyopampdiv.svg" alt="rdiv" title=""></p>
 </div></blockquote>
