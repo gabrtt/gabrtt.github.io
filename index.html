@@ -15,8 +15,26 @@ align: center;
 </head>
 <body>
 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '268140363692014',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
 
-
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 <div class="container"><h2 id="14-amplificadores">1.4   Amplificadores</h2>
 
 <p><div class="toc">
@@ -202,26 +220,46 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 
 <p>Isso traz uma importante consequência:</p>
 
-<p></p><div align="center"> <br>
-<strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong><p></p>
+<div align="center">
+**O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA**
 
-<p></p><div align="left"><p></p>
+<div align="left">    
+&gt; CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.
 
-<blockquote>
-  <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
-</blockquote>
+Portanto, para garantir a linearidade do amplificador, é necessário que o domínio do sinal esteja dentro dos limites de tensão da fonte.
 
-<p>Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
+
+
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-18"> \frac{V_-}{A_v}<v(t)<\frac{V_{+}}{A_v}</script> <br>
+Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
 
 <p></p><div align="center"><img src="ampopcurva.svg" alt="Curva ampop" title=""><p></p>
 
-<p></p><div align="left"> <br>
-Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.<p></p>
+<div align="left">
+Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.
+A potência fornecida ao amplificador é cedida pela soma das potências fornecidadas pelas duas fontes.
 
-<p></p><div align="center"><img src="supplyopampdual.svg" alt="dual ampop" title=""><p></p>
 
-<p></p><div align="left"> <br>
-Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).<p></p>
+
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-19">P_{fonte} = V_+ I_+ + V_- I_-</script> <br>
+  </p><div align="center"><img src="supplyopampdual.svg" alt="dual ampop" title=""><p></p>
+
+<div align="left">
+Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).
+A potência fornecida pela fonte no caso de alimentação com apenas uma fonte é asimplesmente a potência fornecida pela fonte.
+
+
+
+
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-20">P_{fonte} = V I</script></p>
 
 <p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
 
