@@ -45,6 +45,7 @@ align: center;
 <li><a href="#ganho-expresso-em-decibéis">Ganho expresso em decibéis</a></li>
 <li><a href="#potência-do-amplificador">Potência do amplificador</a></li>
 <li><a href="#alimentação-do-amplificador">Alimentação do amplificador</a></li>
+<li><a href="#transferência-não-linear-e-polarização">Transferência não linear e polarização</a></li>
 </ul>
 </li>
 </ul>
@@ -66,7 +67,7 @@ align: center;
 <p>A constante <em>A</em> é denominada <strong>ganho</strong> do amplificador e apresenta uma relação de linearidade. Caso essa relação não seja respeitada, o amplificador apresenta <strong>distorções não lineares</strong>. Os amplificadores necessitam de alimentação, pois não há criação de energia. A energia acrescida ao sinal de saída é <strong>proveniente da fonte</strong> de alimentação do amplificador. Os amplificadores são representados pelo seguinte símbolo:</p>
 
 <div align="center"> 
-<img src="amp1.svg">amp1
+<img src="/img//img/amp1.svg">amp1
 <div align="left">
 
 Ganho de tensão A<sub>v</sub>:
@@ -236,7 +237,7 @@ Portanto, para garantir a linearidade do amplificador, é necessário que o dom�
 <p><script type="math/tex; mode=display" id="MathJax-Element-18"> \frac{V_-}{A_v}<v(t)<\frac{V_{+}}{A_v}</script> <br>
 Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
 
-<p></p><div align="center"><img src="ampopcurva.svg" alt="Curva ampop" title=""><p></p>
+<p></p><div align="center"><img src="/img/ampopcurva.svg" alt="Curva ampop" title=""><p></p>
 
 <div align="left">
 Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.
@@ -248,7 +249,7 @@ A potência fornecida ao amplificador é cedida pela soma das potências forneci
 <div class="se-preview-section-delimiter"></div>
 
 <p><script type="math/tex; mode=display" id="MathJax-Element-19">P_{fonte} = V_+ I_+ + V_- I_-</script> <br>
-  </p><div align="center"><img src="supplyopampdual.svg" alt="dual ampop" title=""><p></p>
+  </p><div align="center"><img src="/img/supplyopampdual.svg" alt="dual ampop" title=""><p></p>
 
 <div align="left">
 Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).
@@ -261,40 +262,26 @@ A potência fornecida pela fonte no caso de alimentação com apenas uma fonte �
 
 <p><script type="math/tex; mode=display" id="MathJax-Element-20">P_{fonte} = V I</script></p>
 
-<p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
+<p></p><div align="center"><img src="/img/supplyopampsingle.svg" alt="single ampop" title=""><p></p>
 
-<p></p><div align="left"> <br>
-Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. <p></p>
+<div align="left">
+Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. 
 
-<p></p><div align="center"><img src="supplyopampoffset.svg" alt="div ampop" title=""><p></p>
+  <div align="center">![div ampop](/img/supplyopampoffset.svg)
 
-<p></p><div align="left"><p></p>
+<div align="left">
 
-<blockquote>
-  <p>Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. </p>
-  
-  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador <br>
-   </p><div align="center"><p></p>
-</div></blockquote></div></div></div></div></div></div></div></div></div></div></div></div>
+&gt;Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. 
+&gt;
+&gt;Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador
+ <div align="center">
+&gt;![/img/supplyopampdiv](supplyopampdiv.svg)
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-25">P_{fonte} = V I</script></p>
 
-<p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
 
-<p></p><div align="left"> <br>
-Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. <p></p>
 
-<p></p><div align="center"><img src="supplyopampoffset.svg" alt="div ampop" title=""><p></p>
 
-<p></p><div align="left"><p></p>
-
-<blockquote>
-  <p>Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. </p>
-  
-  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador <br>
-   </p><div align="center"> <br>
-  <img src="supplyopampdiv.svg" alt="supplyopampdiv" title=""><p></p>
-</div></blockquote></div></div></div></div>
+<div class="se-preview-section-delimiter"></div>
 
 <h3 id="transferência-não-linear-e-polarização">Transferência não linear e polarização</h3>
 
@@ -302,31 +289,33 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <p>O ganho é definido como o derivada da curva de amplificação no ponto quiescente.</p>
 
+<div class="se-preview-section-delimiter"></div>
 
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-101"> A_v = \left.\frac{dv_{out}}{dv_{in}}\right|_Q</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-21"> A_v = \left.\frac{dv_{out}}{dv_{in}}\right|_Q</script></p>
 
 <p>E o sinal de entrada polarizado é:</p>
 
+<div class="se-preview-section-delimiter"></div>
 
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-120">v_{IN} = V_{in} + v_{in}</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-22">v_{IN} = V_{in} + v_{in}</script></p>
 
 <p>E o sinal de saída polarizado é:</p>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-137">v_{OUT} = V_{OUT} + v_{out}</script></p>
+<div class="se-preview-section-delimiter"></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-23">v_{OUT} = V_{OUT} + v_{out}</script></p>
 
 <p>Essa situação é melhor observada com as imagens abaixo.</p>
 
 <p></p><div align="center"><p></p>
 
-<p><img src="supplyopampoffset.svg" alt="div ampop" title=""></p>
+<p><img src="/img/supplyopampoffset.svg" alt="div ampop" title=""></p>
 
-<p><img src="supplyopampnlinearcurva.svg" alt="div ampop" title=""></p>
+<p><img src="/img/supplyopampnlinearcurva.svg" alt="div ampop" title=""></p>
 
 <p></p><div align="left"><p></p>
 
 <blockquote>
   <p>Costuma-se trabalhar com sinais de pequenas amplitudes, pois somado a polarização, não pode ultrapassar a região de linearidade. Opera-se dentro de 90% da tensão limite.</p>
-</blockquote></div></div></div></body>
+</blockquote></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></body>
 </html>
