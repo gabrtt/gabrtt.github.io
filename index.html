@@ -1,252 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EE530</title>
-<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
-<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-<style>
-img, table {
-align: center;
-}
-</style>
-
+<title>Facebook Login JavaScript Example</title>
+<meta charset="UTF-8">
 </head>
 <body>
-
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '268140363692014',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
+  // This is called with the results from from FB.getLoginStatus().
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+    } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +your-app-id
+        'into this app.';
+    }
+  }
+your-app-id
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
     });
-    FB.AppEvents.logPageView();   
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '{268140363692014}',
+    cookie     : true,  // enable cookies to allow the server to access 
+                        // the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.8' // use graph api version 2.8
+  });
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+
   };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+    console.log('Welcome!  Fetching your information.... ');
+    FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+        'Thanks for logging in, ' + response.name + '!';
+    });
+  }
 </script>
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
-<div class="container"><h2 id="14-amplificadores">1.4   Amplificadores</h2>
 
-<p><div class="toc">
-<ul>
-<li><ul>
-<li><a href="#14-amplificadores">1.4   Amplificadores</a><ul>
-<li><a href="#ganho">Ganho</a></li>
-<li><a href="#ganho-expresso-em-decibéis">Ganho expresso em decibéis</a></li>
-<li><a href="#potência-do-amplificador">Potência do amplificador</a></li>
-<li><a href="#alimentação-do-amplificador">Alimentação do amplificador</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
 </div>
-</p>
 
-<p>Transdutores, no geral, emitem sinais de baixa tensão (μV ou mV) e baixa energia, tornando seu processamento uma tarefa difícil. Para que o nível de tensão seja elevado, a fim de facilitar o processamento do sinal, utiliza-se <strong>amplificadores</strong>.</p>
-
-<p>Amplificadores ideais ditos lineares,  têm como sinal de saída uma cópia do sinal de entrada, porém com sua <strong>magnitude alterada</strong>. Esse comportamento não permite <strong>nenhuma distorção</strong> na forma de onda encontrada na saída. Esse amplificador pode ser descrito pela seguinte expressão:</p>
-
-<div align="center"><script type="math/tex; mode=display" id="MathJax-Element-1">v_0(t) = A v_i(t)</script></div>
-
-
-
-<h3 id="ganho">Ganho</h3>
-
-<p>A constante <em>A</em> é denominada <strong>ganho</strong> do amplificador e apresenta uma relação de linearidade. Caso essa relação não seja respeitada, o amplificador apresenta <strong>distorções não lineares</strong>. Os amplificadores necessitam de alimentação, pois não há criação de energia. A energia acrescida ao sinal de saída é <strong>proveniente da fonte</strong> de alimentação do amplificador. Os amplificadores são representados pelo seguinte símbolo:</p>
-
-<div align="center"> 
-<img src="amp1.svg">amp1
-<div align="left">
-
-Ganho de tensão A<sub>v</sub>:
-
-
-
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-2">A_v = \frac{v_o}{v_i}</script></p>
-
-<blockquote>
-  <p>A saída de um amplificador linear alimentado por um sinal senoidal é senoidal com amplitude multiplicada pelo ganho, <strong>não apresentando distorções</strong>.</p>
-</blockquote>
-
-<p>Além do ganho de tensão A<sub>v</sub>, há o ganho de corrente  A<sub>i</sub> e o ganho de potência A<sub>p</sub>, definidos pelas equações a seguir. <br>
-<br>
-<br></p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-3">A_i = \frac{i_o}{i_i} \quad \quad\quad\quad\quad A_p = \frac{v_o i_o}{v_i i_i} </script> <br>
-<br>
-Desse modo, o ganho de potência A<sub>p</sub> pode ser escrito da forma:</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-4">A_p = A_i \cdot A_v</script></p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<h3 id="ganho-expresso-em-decibéis">Ganho expresso em decibéis</h3>
-
-<p>O ganho é adimensional, já que as unidades se cancelam. Entretanto, para fins didáticos, costuma-se utilizar unidades como V/V, A/A e W/W. </p>
-
-<p>Em eletrônica é muito comum que a diferença entre as ordens de grandeza entre os sinais de entrada e saída seja muito elevada. Para isso, utiliza-se o ganho em  escala logarítmica, denominada <strong>Bel</strong> (B).  <br>
-<script type="math/tex; mode=display" id="MathJax-Element-5">G = log_{10} \frac{P_o}{P_i} B = log_{10}  A_p B</script></p>
-
-<p>A unidade Bel é muito grande, pouquíssima variação para grandes variações de ganho (A) e por essa razão utiliza-se seu submúltiplo, o <strong>decibel</strong>, o que evita o usso exagerado de casas decimais.</p>
-
-<p><em>Exemplo</em>: Tabela comparativa entre valores de Bel e decibel.</p>
-
-<table align="center">
-<thead>
-<tr>
-  <th align="center">A</th>
-  <th align="center">G<sub>B</sub></th>
-  <th align="center">G<sub>dB</sub></th>
-</tr>
-</thead>
-<tbody><tr>
-  <td align="center">1000</td>
-  <td align="center">3 B</td>
-  <td align="center">30dB</td>
-</tr>
-<tr>
-  <td align="center">100</td>
-  <td align="center">2 B</td>
-  <td align="center">20 dB</td>
-</tr>
-<tr>
-  <td align="center">10</td>
-  <td align="center">1 B</td>
-  <td align="center">10 dB</td>
-</tr>
-</tbody></table>
-
-<p></p><p>Para um valor de ganho (A) de 5</p>
-
-<p>Para um valor de ganho (A) de 500, o ganho em bel é aproximadamente de 2,7 B e o decibel de 27 dB, evitando o uso de vírgulas.</p>
-
-<p><br>
-<script type="math/tex; mode=display" id="MathJax-Element-6">G = 10 \cdot log_{10}  \frac{P_o}{P_i} dB= 10 \cdot log_{10}  |A_p| dB</script></p>
-
-<p>O ganho pode ser obtido pela tensão por meio da seguinte manipulação, caso as resistências de entrada e saída sejam iguais.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-7">G = 10 \cdot log_{10}  \frac{v_o²/R_o}{v_i²/R_i} dB= 20 \cdot log_{10}   | \frac{v_o}{v_i}| = 20 \cdot log_{10}   |A_v| dB</script></p>
-
-<p>Da mesma forma, o ganho pode ser obtido pela corrente por meio da seguinte manipulação.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-8">G = 10 \cdot log_{10} | \frac{i_o² R_o}{i_i² R_i}| dB= 20 \cdot log_{10}   | \frac{i_o}{i_i}| = 20 \cdot log_{10}   |A_i| dB</script> <br>
-Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mesmo se as resistências não forem iguais, <strong>desde que seja especificado como ganho de tensao G<sub>v</sub></strong>.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-9">G_v = 20 \cdot log_{10}   |A_v| dB</script></p>
-
-<p>Bem como o ganho de corrente G<sub>i</sub>.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-10">G_i = 20 \cdot log_{10}   |A_i| dB</script></p>
-
-<p>Há ainda uma relação entre o ganho e os ganhos de  corrente e tensão.</p>
-
-<blockquote>
-  <p>Pode-se representar o ganho G como G<sub>p</sub>, para fins didáticos. Afinal, o ganho é definido como ganho de potência por questões históricas. A medição logarítmica definida pela potência foi introduzida pela <em>Bell Telephone Company</em>, que especificava seus dispositivos através dessa unidade. Uma vez que a percepção sonora humana não é linear e sim logarítmica, o uso do ganho em decibel para especificação de atenuação em dispositivos de telefonia faz todo sentido.</p>
-</blockquote>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-11">G = 10 \cdot log_{10}  \frac{P_o}{P_i}dB=10 \cdot log_{10}  \frac{v_o i_o}{v_i i_i} dB =10 \cdot log_{10} (A_v A_i) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-12">G= 10 \cdot log_{10} (A_vA_i) dB =10  \cdot log_{10}|A_v|+10 \cdot log_{10}|A_i| </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-13">G = \frac{1}{2} (20 \cdot log_{10}   |A_v| + 20 \cdot log_{10}   |A_i|) dB </script> <br>
-<script type="math/tex; mode=display" id="MathJax-Element-14">G = \frac{1}{2}  (G_v+G_i) dB</script></p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<h3 id="potência-do-amplificador">Potência do amplificador</h3>
-
-<blockquote>
-  <p>Se a potência de saída é maior do que a potência de saída, o amplificador fere algum princípio de conservação de energia? </p>
-  
-  <p></p><div align="center"> <strong>NÃO</strong> </div>
-  <div align="left"><p></p>
-  
-  <p>O aumento de potência é suprido pela alimentação externa do amplificador. Dessa forma, o amplificador não fere nenhuma lei de conservação de energia.</p>
-</div></blockquote>
-
-<p>O amplificador real apresenta perdas como as por aquecimento. Portanto, é útil determinarmos a eficiência do amplificador</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-15">      \eta = \frac{P_{out}}{P_{in}}      </script></p>
-
-<p>A potência entrando no amplificador, satisfazendo as leis de conservação, é igual a soma da da potência de entrada do sinal com a potência fornecida pelas alimentação do amplificador.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-16">P_{in} = P_{sinal} + P_{fonte}</script></p>
-
-<p>Já a potência saindo do amplificador é a potência do sinal amplificado. Portanto a eficiência pode ser descrita como visto abaixo, já que a potência do sinal é muito baixa comparada a potência da fonte (motivo da amplificação), podendo ser desprezada.</p>
-
-<div class="se-preview-section-delimiter"></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-17">      \eta = \frac{P_{out}}{P_{fonte}}      </script></p>
-
-<blockquote>
-  <p>Note que a dissipação impede que a eficiência do amplificador chegue a 1.</p>
-</blockquote>
-
-<div class="se-preview-section-delimiter"></div>
-
-<h3 id="alimentação-do-amplificador">Alimentação do amplificador</h3>
-
-<p>Além de suprir a potência para amplificação, a alimentação é responsável por definir os limites de tensão do sinal amplificado. De modo que a tensão de saída não pode ser maior do que a tensão da alimentação do amplificador.</p>
-
-<p>Isso traz uma importante consequência:</p>
-
-<p></p><div align="center"> <br>
-<strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong><p></p>
-
-<p></p><div align="left"><p></p>
-
-<blockquote>
-  <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
-</blockquote>
-
-<p>Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
-
-<p></p><div align="center"><img src="ampopcurva.svg" alt="Curva ampop" title=""><p></p>
-
-<p></p><div align="left"> <br>
-Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.<p></p>
-
-<p></p><div align="center"><img src="supplyopampdual.svg" alt="dual ampop" title=""><p></p>
-
-<p></p><div align="left"> <br>
-Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).<p></p>
-
-<p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
-
-<p></p><div align="left"> <br>
-Porém, adicionando um offset, com a utilização do divisor de tensão da fonte, é possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. <p></p>
-
-<p></p><div align="center"><img src="supplyopampdiv.svg" alt="div ampop" title=""><p></p>
-
-<p></p><div align="left"><p></p></div></div></div></div></div></div></div></div></div></div></div></div></div></body>
+</body>
 </html>
