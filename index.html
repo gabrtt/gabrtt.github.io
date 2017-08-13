@@ -4,11 +4,11 @@
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
 </head>
-<body>
-<script>
+
+  <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '268140363692014',
+      appId      : '1547559105301796',
       xfbml      : true,
       version    : 'v2.10'
     });
@@ -19,37 +19,11 @@
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
      js = d.createElement(s); js.id = id;
-     js.src = "Agora você pode testar seu aplicativo acessando a URL onde carregou o HTML. Abra seu console do JavaScript, e você verá a função testAPI() exibir uma mensagem com seu nome no registro do console.
-35
-​
-36
-Muito bem! Você acabou de criar uma página básica com o Login no Facebook. Você pode usar essas instruções como ponto de partida para o seu próprio aplicativo, mas será útil ler e entender o que está acontecendo no código acima.
-37
-​
-38
-Recursos adicionais
-39
-​
-40
-Caixa de diálogo Login
-41
-Referência do SDK do Facebook para JavaScript para FB.login()
-42
-​
-43
-Botão Login
-44
-Uma maneira simples de acionar a caixa de diálogo Login.
-45
-​
-46
-​
-47
-Português (Brasil)English (US)EspañolFrançais (France)ItalianoDeutschالعربية
-48
-Node.insertBefore(js, fjs);
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+  
   <div
   class="fb-like"
   data-share="true"
