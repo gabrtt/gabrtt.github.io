@@ -277,7 +277,7 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 &gt;
 &gt;Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador
  <div align="center">
-&gt;![/img/supplyopampdiv](img/supplyopampdiv.svg)
+&gt; ![/img/supplyopampdiv](img/supplyopampdiv.svg)
 
 
 
@@ -319,9 +319,58 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <blockquote>
   <p>Costuma-se trabalhar com sinais de pequenas amplitudes, pois somado a polarização, não pode ultrapassar a região de linearidade. Opera-se dentro de 90% da tensão limite.</p>
-</blockquote></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+</blockquote>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-44">v_{OUT} = V_{OUT} + v_{out}</script></p>
+<p><img src="img/modeloopamptensao.svg" alt="tensaoamp" title=""></p>
+
+<p><img src="img/modeloopampcorrente.svg" alt="correnteamp" title=""></p>
+
+<p><img src="img/modeloopamptransresistencia.svg" alt="transresistamp" title=""></p>
+
+<p><img src="img/modeloopamptranscondutancia.svg" alt="transconduamp" title=""></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-37"> \frac{V_-}{A_v}<v(t)<\frac{V_{+}}{A_v}</script> <br>
+Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
+
+<p></p><div align="center">  <br>
+<img src="img/ampopcurva.svg" alt="Curva ampop" title=""><p></p>
+
+<p></p><div align="left"> <br>
+Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação. <br>
+A potência fornecida ao amplificador é cedida pela soma das potências fornecidadas pelas duas fontes.<p></p></div></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-34">P_{fonte} = V_+ I_+ + V_- I_-</script> <br>
+  </p><div align="center">  <br>
+  <img src="img/supplyopampdual.svg" alt="dual ampop" title=""><p></p>
+
+<p></p><div align="left"> <br>
+Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V). <br>
+A potência fornecida pela fonte no caso de alimentação com apenas uma fonte é asimplesmente a potência fornecida pela fonte.<p></p></div></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-31">P_{fonte} = V I</script></p>
+
+<p></p><div align="center"><img src="img/supplyopampsingle.svg" alt="single ampop" title=""><p></p>
+
+<p></p><div align="left"> <br>
+Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. <p></p>
+
+<p></p><div align="center"><img src="img/supplyopampoffset.svg" alt="div ampop" title=""><p></p>
+
+<p></p><div align="left"><p></p>
+
+<blockquote>
+  <p>Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. </p>
+  
+  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador</p>
+  
+  <p></p><div align="center"><p></p>
+  
+  <p><img src="img/supplyopampdiv.svg" alt="div" title=""></p>
+</div></blockquote>
+
+<p></p><div align="left"><p></p></div></div></div></div></div>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-25">v_{OUT} = V_{OUT} + v_{out}</script></p>
 
 <p>Essa situação é melhor observada com as imagens abaixo.</p>
 
@@ -329,12 +378,12 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <p><img src="img/supplyopampoffset.svg" alt="div ampop" title=""></p>
 
-<p>![div ampop](html img sourceimg/supplyopampnlinearcurva.svg)</p>
+<p><img src="img/supplyopampnlinearcurva.svg" alt="div ampop" title=""></p>
 
 <p></p><div align="left"><p></p>
 
 <blockquote>
-  <p>Costuma-se trabalhar com sinais de pequenas amplitudes, pois somado a polarização, não pode ultrapassar a região de linearidade. Opera-se dentro de 90% da tensão limite.</p>
+  <p>Costuma-se trabalhar chtml img sourceimg/supplyopampnlinearcurva.svgom sinais de pequenas amplitudes, pois somado a polarização, não pode ultrapassar a região de linearidade. Opera-se dentro de 90% da tensão limite.</p>
 </blockquote>
 
 <p><img src="img/modeloopamptensao.svg" alt="tensaoamp" title=""></p>
