@@ -277,7 +277,7 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
    </p><div align="center"><p></p>
 </div></blockquote></div></div></div></div></div></div></div></div></div></div></div></div>
 
-<p><script type="math/tex; mode=display" id="MathJax-Element-24">P_{fonte} = V I</script></p>
+<p><script type="math/tex; mode=display" id="MathJax-Element-25">P_{fonte} = V I</script></p>
 
 <p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
 
@@ -294,5 +294,39 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
   <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador <br>
    </p><div align="center"> <br>
   <img src="supplyopampdiv.svg" alt="supplyopampdiv" title=""><p></p>
-</div></blockquote></div></div></div></div></div></body>
+</div></blockquote></div></div></div></div>
+
+<h3 id="transferência-não-linear-e-polarização">Transferência não linear e polarização</h3>
+
+<p>Polarização é justamente a adição de um nível de tensão DC para deslocar o nível de tensão negativo. No caso de uma curva de amplificação não linear a polarização é necessária para deslocar o sinal para a região linear de amplificação. O meio da região linear de operação é definido como <strong>ponto quiescente</strong></p>
+
+<p>O ganho é definido como o derivada da curva de amplificação no ponto quiescente.</p>
+
+
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-101"> A_v = \left.\frac{dv_{out}}{dv_{in}}\right|_Q</script></p>
+
+<p>E o sinal de entrada polarizado é:</p>
+
+
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-120">v_{IN} = V_{in} + v_{in}</script></p>
+
+<p>E o sinal de saída polarizado é:</p>
+
+<p><script type="math/tex; mode=display" id="MathJax-Element-137">v_{OUT} = V_{OUT} + v_{out}</script></p>
+
+<p>Essa situação é melhor observada com as imagens abaixo.</p>
+
+<p></p><div align="center"><p></p>
+
+<p><img src="supplyopampoffset.svg" alt="div ampop" title=""></p>
+
+<p><img src="supplyopampnlinearcurva.svg" alt="div ampop" title=""></p>
+
+<p></p><div align="left"><p></p>
+
+<blockquote>
+  <p>Costuma-se trabalhar com sinais de pequenas amplitudes, pois somado a polarização, não pode ultrapassar a região de linearidade. Opera-se dentro de 90% da tensão limite.</p>
+</blockquote></div></div></div></body>
 </html>
