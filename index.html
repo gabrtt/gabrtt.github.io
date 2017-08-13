@@ -14,27 +14,6 @@ align: center;
 
 </head>
 <body>
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '268140363692014',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-    FB.AppEvents.logPageView();   
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
 <div class="container"><h2 id="14-amplificadores">1.4   Amplificadores</h2>
 
 <p><div class="toc">
@@ -223,7 +202,8 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 
 <div align="center">
 
-**O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA**
+<strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong>
+
 <br>
 <div align="left">    
 
@@ -280,7 +260,8 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 &gt;Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. 
 &gt;
 &gt;Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador
-&gt; <div align="center">
+&gt; 
+<div align="center">
 
 &gt;  ![rdiv](img/supplyopampdiv.svg)
 
@@ -335,52 +316,5 @@ Porém, adicionando um offset ao sinal, elevando a tensão, é  possível desloc
 
 <p><img src="img/modeloopamptransresistencia.svg" alt="transresistamp" title=""></p>
 
-<p><img src="img/modeloopamptranscondutancia.svg" alt="transconduamp" title=""></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
-
-<h3 id="alimentação-do-amplificador-1">Alimentação do amplificador</h3>
-
-<p>Além de suprir a potência para amplificação, a alimentação é responsável por definir os limites de tensão do sinal amplificado. De modo que a tensão de saída não pode ser maior do que a tensão da alimentação do amplificador.</p>
-
-<p>Isso traz uma importante consequência:</p>
-
-<p></p><div align="center"><p></p>
-
-<p><strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong></p>
-
-<p><br>
-</p><div align="left">    <p></p>
-
-<blockquote>
-  <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
-</blockquote>
-
-<p>Portanto, para garantir a linearidade do amplificador, é necessário que o domínio do sinal esteja dentro dos limites de tensão da fonte.</p></div></div>
-
-<p><script type="math/tex; mode=display" id="MathJax-Element-23">P_{fonte} = V I</script></p>
-
-<p></p><div align="center"><p></p>
-
-<p><img src="img/supplyopampsingle.svg" alt="single ampop" title=""></p>
-
-<p></p><div align="left"><p></p>
-
-<p>Porém, adicionando um offset ao sinal, elevando a tensão, é  possível deslocar a saída de forma que fique integralmente positiva, desde que a tensão máxima continue dentro dos limites. </p>
-
-<p></p><div align="center"><p></p>
-
-<p><img src="img/supplyopampoffset.svg" alt="div ampop" title=""></p>
-
-<p></p><div align="left"><p></p>
-
-<blockquote>
-  <p>Talvez esteja se perguntando sobre a utilidade de se usar a alimentação com apenas uma fonte, se é necessária a adição de uma fonte de tensão para deslocar o sinal. </p>
-  
-  <p>Não é preciso adicionar outra fonte, pois esse offset pode ser gerado por um divisor de tensão da fonte de alimentação do amplificador</p>
-  
-  <p></p><div align="center"><p></p>
-  
-  <p><img src="img/supplyopampdiv.svg" alt="rdiv" title=""></p>
-</div></blockquote>
-
-<p></p><div align="left"><p></p></div></div></div></div></div></div></body>
+<p><img src="img/modeloopamptranscondutancia.svg" alt="transconduamp" title=""></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></body>
 </html>
