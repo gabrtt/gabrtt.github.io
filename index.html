@@ -207,31 +207,6 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
   <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
 </blockquote>
 
-<p>Caso o sinal amplificado tenha uma tensão maior do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
-
-<p></p><div align="center"><img src="ampopcurva.svg" alt="Curva ampop" title=""><p></p>
-
-<p><img src="supplyopampsingle.svg" alt="single ampop" title=""></p>
-
-<p><img src="supplyopampdiv.svg" alt="div ampop" title=""></p>
-
-<p><img src="supplyopampdual.svg" alt="dual ampop" title=""></p></div></div></div></div></div>
-
-<h3 id="alimentação-do-amplificador-1">Alimentação do amplificador</h3>
-
-<p>Além de suprir a potência para amplificação, a alimentação é responsável por definir os limites de tensão do sinal amplificado. De modo que a tensão de saída não pode ser maior do que a tensão da alimentação do amplificador.</p>
-
-<p>Isso traz uma importante consequência:</p>
-
-<p></p><div align="center"> <br>
-<strong>O AMPLIFICADOR É LINEAR APENAS EM UMA FAIXA</strong><p></p>
-
-<p></p><div align="left"><p></p>
-
-<blockquote>
-  <p>CALMA! Isso não é o fim do mundo, é um problema natural da engenharia, só precisamos definir bem a amplitude do sinal de entrada e garantir que a alimentação é maior, assim podemos considerá-lo linear para nossas aplicações.</p>
-</blockquote>
-
 <p>Caso o sinal amplificado tenha uma tensão maior, ou menor no caso negativo,  do que a de alimentação ele será ceifado com a tensão de alimentação. Esse fenômeno é chamado de saturação. Isso tudo fica mais claro na imagem a seguir.</p>
 
 <p></p><div align="center"><img src="ampopcurva.svg" alt="Curva ampop" title=""><p></p>
@@ -239,13 +214,15 @@ Contudo, a fim de comparação, pode-se utilizar o ganho através de tensão mes
 <p></p><div align="left"> <br>
 Para garantir a melhor integridade do sinal, é preciso alimentar a entrada V<sub>+</sub> com uma tensão positiva perante ao terra e a V<sub>-</sub> com uma tensão negativa perante ao terra, garantindo que a tensão da saída varie entre as tensões positiva e negativa da alimentação.<p></p>
 
-<p><img src="supplyopampdual.svg" alt="dual ampop" title=""></p>
+<p></p><div align="center"><img src="supplyopampdual.svg" alt="dual ampop" title=""><p></p>
 
-<p>Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).</p>
+<p></p><div align="left"> <br>
+Caso a entrada V<sub>-</sub> seja aterrada, o sinal da saída será ceifado, pois a menor tensão possível seria o terra (0V).<p></p>
 
-<p><img src="supplyopampsingle.svg" alt="single ampop" title=""></p>
+<p></p><div align="center"><img src="supplyopampsingle.svg" alt="single ampop" title=""><p></p>
 
-<p>Porém, adicionando um offset, com a utilização do divisor de tensão da fonte, é possível deslocar a saída de forma que fique integralmente positiva. </p>
+<p></p><div align="left"> <br>
+Porém, adicionando um offset, com a utilização do divisor de tensão da fonte, é possível deslocar a saída de forma que fique integralmente positiva. <p></p>
 
-<p><img src="supplyopampdiv.svg" alt="div ampop" title=""></p></div></div></div></div></div></body>
+<p></p><div align="center"><img src="supplyopampdiv.svg" alt="div ampop" title=""><p></p></div></div></div></div></div></div></div></div></div></div></div></div></body>
 </html>
