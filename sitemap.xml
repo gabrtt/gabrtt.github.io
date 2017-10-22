@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://RAMO.COM/index.html</loc>
+    <lastmod>2017-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 370px)" href="http://RAMO.COM/phone/index.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-width: 960px)" href="http://RAMO.COM/tablet/index.html"/>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/arte-2.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/imagem%20colada%20950x534.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/svg-colado-38522x39.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/svg-colado-536315x48.svg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/facebook.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/google-.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/linkedin.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/twitter.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/cactus.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/road.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>http://RAMO.COM/images/trees.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>
